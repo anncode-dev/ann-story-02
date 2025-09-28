@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siti & Angga | anncode.dev</title>
+    <meta name="description" content="Kami mengundang Saudara/i untuk hadir dalam acara pernikahan kami.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Siti & Angga | anncode.dev">
+    <meta property="og:description" content="Kami mengundang Saudara/i untuk hadir dalam acara pernikahan kami.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://siti-angga-anncode.vercel.app/">
+    <meta property="og:image" content="https://siti-angga-anncode.vercel.app/assets/images/gambar-og.jpg">
+    <meta property="og:image:secure_url" content="https://siti-angga-anncode.vercel.app/assets/images/gambar-og.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="750">
+    <meta property="og:image:height" content="600">
+
+    <!-- Twitter Card (opsional tapi disarankan) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Siti & Angga | anncode.dev">
+    <meta name="twitter:description" content="Kami mengundang Saudara/i untuk hadir dalam acara pernikahan kami.">
+    <meta name="twitter:image" content="https://siti-angga-anncode.vercel.app/assets/images/gambar-og.jpg">
+
+    <link rel="canonical" href="https://siti-angga-anncode.vercel.app/">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+    <style>
+        @font-face {
+        font-family: "hdr";
+        src: url("assets/fonts/Palisade.otf") format("truetype");
+        }
+
+        @font-face {
+        font-family: "scd";
+        src: url("assets/fonts/Mistrully.ttf") format("truetype");
+        }
+
+        @font-face {
+        font-family: "txt";
+        src: url("assets/fonts/Merienda-VariableFont_wght.ttf") format("truetype");
+        }
+
+        body {
+            background-color: rgb(255, 255, 255) !important;
+        }
+
+        body, html { font-family: "hdr"; scroll-behavior: smooth; overflow-x: hidden; }
+        img, video { max-width: 100%; height: auto; }
+
+        /* Intro fullscreen */
+        #intro { position: fixed; top:0; left:0; width:100%; height:100vh; z-index:9999; transition: opacity 0.7s ease; }
+        #intro video { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:1; }
+        #intro-content { position:absolute; bottom:10%; left:0; right:0; z-index:2; text-align:center; padding:0 1rem; }
+
+        #gallery { max-width: 400px; margin: auto; }
+        .preview { width: 100%; height: 550px; overflow: hidden; border-radius: 0.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
+        .preview img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s ease-in-out; }
+        .swiper-slide img { width: 80px; height: 80px; object-fit: cover; border-radius: 0.5rem; cursor: pointer; }
+    </style>
+</head>
+
+<body class="font-sans">
+
+    <section 
+        id="intro" 
+        class="relative text-white min-h-screen flex flex-col justify-between items-center text-center py-28 bg-cover bg-center"
+        style="background-image: url('assets/images/img-01.jpg');"
+    >
+        <div class="absolute inset-0 bg-black/10"></div>
+
+        <div class="absolute bottom-0 left-0 w-full h-1/2" 
+            style="background: linear-gradient(to top, rgba(0,0,0,0.4) 65%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 100%);">
+        </div>
+
+        <div class="relative z-10">
+            <p class="text-xl font-[txt]">The Wedding of</p>
+            <h1 class="text-[65px] mt-5 font-semibold text-[#8C1007] font-[hdr]">Yulan & Panji</h1>
+        </div>
+
+        <div id="intro-content" class="relative z-10 pb-10">
+            <p class="text-base font-[txt]">Kepada Yth.</p>
+            <p id="nama-tamu" class="text-xl font-semibold mt-2 font-[txt]">
+                Tamu Undangan
+            </p>
+            <button id="btn-open" class="bg-[#8C1007] border border-[#8C1007] text-white px-6 py-3 mt-5 rounded-md transition-transform hover:scale-105 font-[txt]">
+                Buka Undangan
+            </button>
+        </div>
+    </section>
+
+    <section id="bagian-kedua" class="relative min-h-screen text-white overflow-hidden">
+        <div class="relative text-white min-h-screen py-16 bg-cover bg-left" style="background-image: url('assets/images/img-04.jpg');">
+            <div class="relative text-center">
+                <div class="absolute inset-0 flex items-center justify-center" data-aos="fade-up" data-aos-delay="600">
+                    <span class="text-[200px] text-white/20 font-[hdr] select-none">&</span>
+                </div>
+                <p class="relative -left-16 text-[70px] font-[hdr] text-white leading-none" data-aos="fade-right" data-aos-delay="1000">
+                    Yulan
+                </p>
+                <p class="relative text-[70px] -right-20 font-[hdr] text-white leading-none" data-aos="fade-left" data-aos-delay="1000">
+                    Panji
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="bagian-ketiga"
+        class="relative min-h-screen bg-cover bg-center flex items-center justify-center px-6 py-20"
+        style="background-image: url('assets/images/img-02.jpg');"
+    >
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <div class="absolute bottom-0 left-0 w-full h-1/3"
+            style="background: linear-gradient(to top, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%);">
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-8">
+            
+            <div class="w-full md:w-1/2 flex " data-aos="fade-right" data-aos-delay="1000">
+            <img src="assets/images/img-02.jpg" alt="Pengantin" class="shadow-lg box-shadow rounded-md max-h-[420px] object-cover" />
+            </div>
+
+]            <div class="w-full md:w-1/2 text-left mt-6 md:mt-0" data-aos="fade-left" data-aos-delay="1000">
+            <p class="text-sm md:text-base leading-relaxed font-[txt]  text-gray-200">
+                "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan
+                untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan
+                Dia menjadikan di antaramu rasa kasih dan sayang."
+            </p>
+            <p class="mt-4 text-2xl md:text-xl font-[txt] text-white" data-aos="fade-left" data-aos-delay="1000">
+                <span class="font-bold">QS. Ar-Rum :</span> 21
+            </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="bagian-keempat"
+        class="relative text-white min-h-screen flex flex-col justify-between items-center text-center py-10 bg-cover bg-center"
+        style="background-image: url('assets/images/img-05.jpg');"
+    >
+        <p class="relative -left-16 mt-16 text-[90px] font-semibold font-[hdr] text-[#8C1007] leading-none" data-aos="fade-right" data-aos-delay="1000">
+            Yulan
+        </p>
+        <div class="z-10 flex flex-col items-center gap-4">
+            <div class="bg-[#8C1007]/50 backdrop-blur-sm text-sm border border-[#8C1007]/30 text-white px-6 py-4 mt-5 rounded-2xl shadow-md transition-transform hover:scale-105 font-[txt]">
+                <div class="font-[txt] text-2xl">Yulandari Puspita Sari</div>
+                    <div class="mt-8">
+                        <div>Putri Pertama dari <br> Bapak Suhendi & Ibu Siti Aminah</div>
+                    </div>
+                </div>
+
+                <div class="bg-[#8C1007]/40 backdrop-blur-sm text-sm border border-[#8C1007]/30 text-white px-10 mt-5 rounded-lg shadow-md transition-transform hover:scale-105 font-[txt]">
+                    <div class="flex space-x-4 items-center justify-center">
+                        <img src="assets/images/img-05.jpg" alt="Ornamen Kiri" class="h-10 w-10 rounded-full mt-2" />
+                        <p>@me.yulan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bagian-kelima"
+        class="relative text-white min-h-screen flex flex-col justify-between items-center text-center py-10 bg-cover bg-center"
+        style="background-image: url('assets/images/img-06.jpg');"
+    >
+        <p class="relative -left-16 mt-16 text-[90px] font-semibold font-[hdr] text-[#8C1007] leading-none" data-aos="fade-right" data-aos-delay="1000">
+            Panji
+        </p>
+        <div class="z-10 flex flex-col items-center gap-4">
+            <div class="bg-[#8C1007]/50 backdrop-blur-sm text-sm border border-[#8C1007]/30 text-white px-6 py-4 mt-5 rounded-2xl shadow-md transition-transform hover:scale-105 font-[txt]">
+                <div class="font-[txt] text-2xl">Panji Caesar Rusmiadi</div>
+                    <div class="mt-8">
+                        <div>Putri Pertama dari <br> Bapak Suyud & Ibu Wida Ningsih</div>
+                    </div>
+                </div>
+
+                <div class="bg-[#8C1007]/40 backdrop-blur-sm text-sm border border-[#8C1007]/30 text-white px-10 mt-5 rounded-lg shadow-md transition-transform hover:scale-105 font-[txt]">
+                    <div class="flex space-x-4 items-center justify-center">
+                        <img src="assets/images/img-06.jpg" alt="Ornamen Kiri" class="h-10 w-10 rounded-full mt-2" />
+                        <p>@pancaerus</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bagian-keenam"
+        class="relative min-h-screen bg-cover bg-center flex items-center justify-center px-6 py-20"
+        style="background-image: url('assets/images/img-07.jpg');"
+    >
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-8">
+            <div class="w-full md:w-1/2 flex " data-aos="fade-right" data-aos-delay="1000">
+                <img src="assets/images/img-07.jpg" alt="Pengantin" class="shadow-lg box-shadow rounded-md max-h-[420px] object-cover" />
+            </div>
+
+            <div class="w-full text-left " data-aos="fade-left" data-aos-delay="1000">
+                <div
+                    ref="countdownRef"
+                    class="countdown"
+                >
+                    <div class="flex justify-center space-x-10 px-5" data-aos="zoom-in">
+                        <div class="text-center ">
+                        <p class="text-5xl text-white font-bold">{{ days }}</p>
+                        <p class="text-sm mt-2 text-white/80">Hari</p>
+                        </div>
+                        <div class="text-center">
+                        <p class="text-5xl  text-white font-bold">{{ hours }}</p>
+                        <p class="text-sm mt-2 text-white/80">Jam</p>
+                        </div>
+                        <div class="text-center">
+                        <p class="text-5xl text-white font-bold">{{ minutes }}</p>
+                        <p class="text-sm mt-2 text-white/80">Menit</p>
+                        </div>
+                        <div class="text-center">
+                        <p class="text-5xl text-white font-bold">{{ seconds }}</p>
+                        <p class="text-sm mt-2 text-white/80">Detik</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="">
+                <hr class="w-24 mx-auto my-2 border-t-2 border-white" data-aos="zoom-in" />
+            </div>
+            <div class="px-6">
+                <p class="relative text-[60px] font-[hdr] text-white leading-none" data-aos="fade-right" data-aos-delay="1000">
+                    Akad Nikah
+                </p>
+                <div class="text-white mt-4 text-xl font-[txt]" data-aos="fade-left" data-aos-delay="1000">
+                    <p>
+                        Minggu, 12 Oktober 2025
+                    </p>
+                    <p>
+                        Pukul 09.00 WIB - Selesai  
+                    </p>
+                    <p class="mt-5">
+                        Di Rumah Mempelai Wanita
+                        <br>
+                        Kp. Ci Pangawaren RT 09/02, Pasir Panjang, Ciracap
+                    </p>
+                </div>
+                <button id="btn-open" class="bg-[#8C1007] border border-[#8C1007] text-white px-6 py-3 mt-5 rounded-md transition-transform hover:scale-105 font-[txt]">
+                    Goole Maps
+                </button>
+            </div>
+        </div>
+    </section>
+
+<div class="text-center py-4 bg-black/90">
+        <h1 class="text-white text-xl font-bold tracking-widest uppercase">
+        ANNSTORY <span class="text-white/50">| Part of anncode</span>
+        </h1>
+    </div>
+
+    <footer class="text-center py-6 px-4 bg-black/90 text-sm text-white/60">
+        <p>© 2025 <span class="font-semibold text-white font-[txt]">
+            <a href="https://www.instagram.com/ftrhymlyn/" target="_blank" rel="noopener noreferrer" class="hover:underline">ftrhymlyn</a>
+        </span>. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+    <script>
+    const { createApp, ref, onMounted } = Vue;
+
+    const audio = new Audio('./assets/music/music.mp3'); 
+    audio.loop = true;
+
+    document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") {
+            if (audio.paused) audio.play().catch(()=>{});
+        } else {
+            audio.pause();
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const images = [
+            '/assets/images/gambar-1.jpg',
+            '/assets/images/gambar-2.jpg',
+            '/assets/images/gambar-3.jpg',
+            '/assets/images/gambar-4.jpg',
+            '/assets/images/gambar-5.jpg',
+            '/assets/images/gambar-6.jpg',
+            '/assets/images/gambar-7.jpg'
+        ];
+
+        const activeImage = document.getElementById('activeImage');
+
+        const swiper = new Swiper('.mySwiper', {
+            slidesPerView: 2.8,
+            spaceBetween: 10,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        swiper.on('slideChange', () => {
+            const realIndex = swiper.realIndex;
+            activeImage.src = images[realIndex];
+        });
+
+        document.querySelectorAll('.swiper-slide img').forEach((img, index) => {
+            img.addEventListener('click', () => {
+                activeImage.src = images[index];
+                swiper.slideToLoop(index);
+            });
+        });
+    });
+
+    // Firebase
+    const firebaseConfig = {
+        apiKey: "AIzaSyAzJKTrgJh6PZJ5Yyay7QLPDiC8YXMlirc",
+        authDomain: "inv-siti-angga-anncode.firebaseapp.com",
+        projectId: "inv-siti-angga-anncode",
+        storageBucket: "inv-siti-angga-anncode.firebasestorage.app",
+        messagingSenderId: "976339344808",
+        appId: "1:976339344808:web:c0515fd9691aabff13119d"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    // ✅ Tambahkan ini supaya db tersedia
+    const db = firebase.firestore();
+
+    createApp({
+        setup() {
+            const namaTamu = ref('Tamu Undangan');
+
+            onMounted(() => {
+                const params = new URLSearchParams(window.location.search);
+                namaTamu.value = params.get('to') || 'Tamu Undangan';
+                document.getElementById('nama-tamu').textContent = namaTamu.value;
+
+                AOS.init({ once:true, duration:800 });
+
+                const btn = document.getElementById('btn-open');
+                if(btn) btn.addEventListener('click', openInvitation);
+            });
+
+            const openInvitation = () => {
+                audio.play().catch(()=>{}); // play musik saat buka undangan
+                const intro = document.getElementById('intro');
+                intro.style.opacity = 0;
+                setTimeout(() => {
+                    intro.style.display = 'none';
+                    document.getElementById('bagian-kedua').scrollIntoView({ behavior:'smooth' });
+                    AOS.refresh();
+                }, 700);
+            };
+
+            // Countdown
+            const days=ref(0), hours=ref(0), minutes=ref(0), seconds=ref(0);
+            const targetDate=new Date('2025-10-12T00:00:00');
+            let countdownInterval=null;
+            const updateCountdown = () => {
+                const now = new Date();
+                const diff = targetDate - now;
+                if(diff<=0){ clearInterval(countdownInterval); days.value=hours.value=minutes.value=seconds.value=0; return; }
+                days.value=Math.floor(diff/(1000*60*60*24));
+                hours.value=Math.floor((diff/(1000*60*60))%24);
+                minutes.value=Math.floor((diff/(1000*60))%60);
+                seconds.value=Math.floor((diff/1000)%60);
+            };
+            onMounted(()=>{
+                updateCountdown();
+                countdownInterval=setInterval(updateCountdown,1000);
+            });
+
+            // RSVP
+            const isAttending=ref(null), guestCount=ref(1), successMessage=ref('');
+            const setAttendance=(val)=>{ isAttending.value=val; if(!val) guestCount.value=0; AOS.refresh(); };
+            const increment=()=>guestCount.value++;
+            const decrement=()=>{ if(guestCount.value>1) guestCount.value--; };
+            const submitRSVP=async ()=>{
+                if(isAttending.value===null) return alert("Silakan pilih Hadir atau Tidak Hadir");
+                try{
+                    await db.collection('rsvp').add({ hadir:isAttending.value, jumlah_tamu:guestCount.value, createdAt:firebase.firestore.FieldValue.serverTimestamp() });
+                    successMessage.value='Terimakasih! Kehadiran Anda telah tercatat.';
+                    isAttending.value=null; guestCount.value=1;
+                    AOS.refresh();
+                }catch(e){ console.error(e); alert("Gagal menyimpan data"); }
+            };
+
+            // Ucapan
+            const name=ref(''), message=ref(''), ucapanList=ref([]);
+            const submitUcapan=async ()=>{
+                if(!name.value||!message.value) return alert("Nama dan ucapan wajib diisi!");
+                try{
+                    await db.collection('ucapan').add({ name:name.value, message:message.value, createdAt:firebase.firestore.FieldValue.serverTimestamp() });
+                    name.value=''; message.value='';
+                }catch(e){ console.error(e); }
+            };
+            onMounted(()=>{
+                db.collection('ucapan').orderBy('createdAt','desc').onSnapshot(snapshot=>{
+                    ucapanList.value = snapshot.docs.map(doc=>({id:doc.id,...doc.data()}));
+                    AOS.refresh();
+                });
+            });
+
+            // Copy rekening
+            const copied=ref(false), accountNumber='7151745192';
+            const copyAccount=()=>{ navigator.clipboard.writeText(accountNumber).then(()=>{ copied.value=true; setTimeout(()=>copied.value=false,2000); }).catch(()=>alert("Gagal menyalin nomor")); };
+
+            const openMap=()=>{ window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Kp. Ci Pangawaren RT 09/02, Pasir Panjang, Ciracap")}`,"_blank"); };
+            const addToCalendar=()=>{ window.open(`https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent('Undangan Pernikahan Siti & Angga')}&dates=20250828T090000Z/20250828T120000Z`,"_blank"); };
+
+            return { namaTamu, openInvitation, days,hours,minutes,seconds, isAttending, guestCount, successMessage, setAttendance, increment, decrement, submitRSVP, name,message,ucapanList,submitUcapan, copied, copyAccount, openMap, addToCalendar };
+        }
+    }).mount('body');
+    </script> 
+</body>
+
+</html>
