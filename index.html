@@ -442,6 +442,54 @@
         </div>
     </section>
 
+    <section id="bagian-kedelapan"
+    class="relative min-h-screen bg-cover bg-center flex flex-col items-center justify-center px-6 py-10"
+    style="background-image: url('assets/images/gal-03.JPG');">
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <!-- Konten -->
+    <div class="relative z-10 w-full max-w-5xl">
+
+        <!-- Judul -->
+        <div class="flex justify-center items-center text-center text-white mb-10">
+            <p class="text-[65px] font-[hdr] text-white leading-none" data-aos="fade-right" data-aos-delay="1000">
+                Our Love Story
+            </p>
+        </div>
+
+        <!-- Timeline Card -->
+        <div class="space-y-6">
+            <!-- Card 1 -->
+            <div class="relative border border-white/20 rounded-lg p-6 bg-black/40 text-white" data-aos="fade-up">
+                <h3 class="text-xl font-semibold text-[#D4AF37] mb-2 font-[hdr]">Awal bertemu</h3>
+                <p class="text-sm leading-relaxed font-[txt]">
+                    Pertemuan pertama kita adalah saat kita di bangku SMK, saat kita satu sekolah
+                    saat itu, 2014 adalah tahun pertemuan kita yang tidak di sengaja, usia yang masih
+                    sangat labil di jenjang putih abu-abu. Perjalanan panjang yang tentunya tidak selalu
+                    berjalan lurus, apalagi saat kita memutuskan untuk mengejar impian masing masing
+                    dengan terpisahkan jarak.
+                </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="relative border border-white/20 rounded-lg p-6 bg-black/40 text-white" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-xl font-semibold text-[#D4AF37] mb-2 font-[hdr]">Lamaran</h3>
+                <p class="text-sm leading-relaxed font-[txt]">
+                    Akhir tahun 2021 tepatnya tanggal 19 Desember adalah tanggal dimana kita mulai
+                    memupuk komitmen untuk merangkai mimpi dan tujuan hidup bersama. Disitulah kita
+                    bawa orang tua kita untuk bertemu dalam ikatan pertunangan.
+                </p>
+            </div>
+
+            <!-- Tambah Card sesuai kebutuhan -->
+        </div>
+    </div>
+</section>
+
+
+
     <!-- Footer -->
     <div class="text-center py-4 bg-black/90">
         <h1 class="text-white text-xl font-bold tracking-widest uppercase">
@@ -466,7 +514,7 @@
     <script>
     const { createApp, ref, onMounted } = Vue;
 
-    const audio = new Audio(''); 
+    const audio = new Audio('./assets/music/music.mp3'); 
     audio.loop = true;
 
     let modalSwiper;
