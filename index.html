@@ -62,7 +62,9 @@
         #gallery { max-width: 400px; margin: auto; }
         .preview { width: 100%; height: 550px; overflow: hidden; border-radius: 0.5rem; margin-bottom: 1.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
         .preview img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s ease-in-out; }
-        .swiper-slide img { width: 80px; height: 80px; object-fit: cover; border-radius: 0.5rem; cursor: pointer; }
+        .swiper-slide img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s ease-in-out; }
+        .swiper-slide img { width: 100%; height: 100%; object-fit: cover; transition: 0.3s ease-in-out; }
+        
     </style>
 </head>
 
@@ -101,10 +103,10 @@
                 <div class="absolute inset-0 flex items-center justify-center" data-aos="fade-up" data-aos-delay="600">
                     <span class="text-[200px] text-white/20 font-[hdr] select-none">&</span>
                 </div>
-                <p class="relative -left-16 text-[70px] font-[hdr] text-white leading-none" data-aos="fade-right" data-aos-delay="1000">
+                <p class="relative -left-16 text-[70px] font-[hdr] text-white leading-none" data-aos="fade-right" data-aos-delay="300">
                     Yulan
                 </p>
-                <p class="relative text-[70px] -right-20 font-[hdr] text-white leading-none" data-aos="fade-left" data-aos-delay="1000">
+                <p class="relative text-[70px] -right-20 font-[hdr] text-white leading-none" data-aos="fade-left" data-aos-delay="300">
                     Panji
                 </p>
             </div>
@@ -121,21 +123,21 @@
             style="background: linear-gradient(to top, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%);">
         </div>
 
-        <div class="relative z-10 max-w-4xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-8">
+        <div class="relative z-10 max-w-4xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-4">
             
-            <div class="w-full md:w-1/2 flex " data-aos="fade-right" data-aos-delay="1000">
+            <div class="w-full md:w-1/2 flex " data-aos="fade-right" data-aos-delay="500">
             <img src="assets/images/fotokedua.jpg" alt="Pengantin" class="shadow-lg box-shadow rounded-md max-h-[420px] object-cover" />
             </div>
 
-]            <div class="w-full md:w-1/2 text-left mt-6 md:mt-0" data-aos="fade-left" data-aos-delay="1000">
-            <p class="text-sm md:text-base leading-relaxed font-[txt]  text-gray-200">
-                "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan
-                untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan
-                Dia menjadikan di antaramu rasa kasih dan sayang."
-            </p>
-            <p class="mt-4 text-2xl md:text-xl font-[txt] text-white" data-aos="fade-left" data-aos-delay="1000">
-                <span class="font-bold">QS. Ar-Rum :</span> 21
-            </p>
+            <div class="w-full md:w-1/2 text-left " data-aos="fade-left" data-aos-delay="500">
+                <p class="text-sm md:text-base leading-relaxed font-[txt]  text-gray-200">
+                    "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan
+                    untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan
+                    Dia menjadikan di antaramu rasa kasih dan sayang."
+                </p>
+                <p class="mt-4 text-2xl md:text-xl font-[txt] text-white" data-aos="fade-left" data-aos-delay="500">
+                    <span class="font-bold">QS. Ar-Rum :</span> 21
+                </p>
             </div>
 
         </div>
@@ -145,24 +147,30 @@
         class="relative text-white min-h-screen flex flex-col justify-between items-center text-center py-10 bg-cover bg-center"
         style="background-image: url('assets/images/fotokelima.JPG');"
     >
-        <p class="relative -left-16 mt-16 text-[90px] font-semibold font-[hdr] text-[#8C1007] leading-none" data-aos="fade-right" data-aos-delay="1000">
+        <p class="relative -left-16 mt-16 text-[90px] font-semibold font-[hdr] text-[#8C1007] leading-none" data-aos="fade-right" data-aos-delay="500">
             Yulan
         </p>
-        <div class="z-10 flex flex-col items-center gap-4">
-            <div class="bg-[#8C1007]/50 backdrop-blur-sm text-sm border border-[#8C1007]/30 text-white px-6 py-4 mt-5 rounded-2xl shadow-md transition-transform hover:scale-105 font-[txt]">
-                <div class="font-[txt] text-2xl">Yulandari Puspita Sari</div>
-                    <div class="mt-8">
-                        <div>Putri Pertama dari <br> Bapak Suhendi & Ibu Siti Aminah</div>
-                    </div>
-                </div>
 
-                <div class="bg-[#8C1007]/40 backdrop-blur-sm text-sm border border-[#8C1007]/30 text-white px-10 mt-5 rounded-lg shadow-md transition-transform hover:scale-105 font-[txt]">
-                    <div class="flex space-x-4 items-center justify-center">
-                        <img src="assets/images/fotokelima.JPG" alt="Ornamen Kiri" class="h-10 w-10 rounded-full mt-2" />
-                        <p>@me.yulan</p>
+        <div class="z-10 flex flex-col items-center gap-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="bg-[#8C1007]/40 w-full backdrop-blur-sm text-sm border border-[#8C1007]/30 text-white px-6 py-4 mt-5 rounded-2xl shadow-md transition-transform hover:scale-105 font-[txt]" data-aos="fade-up" data-aos-delay="600">
+                <div class="font-[txt] text-xl" data-aos="fade-up" data-aos-delay="800">
+                    Yulandari Puspita Sari, A.P.TRA
+                </div>
+                <div class="mt-4" data-aos="fade-up" data-aos-delay="800">
+                    <div class="font-[txt] text-base">
+                        Putri Pertama dari <br> Bapak Yusep Saepul Barham <br> & <br> Ibu Deundeun Rismawati
                     </div>
                 </div>
             </div>
+
+            <a href="https://www.instagram.com/me.yulannn/" target="_blank" rel="noopener noreferrer" class="no-underline">
+                <div class="bg-[#8C1007] backdrop-blur-sm text-sm border border-[#8C1007]/30 text-white px-10 mt-2 rounded-lg shadow-md transition-transform hover:scale-105 font-[txt]" data-aos="fade-up" data-aos-delay="800">
+                    <div class="flex space-x-4 items-center justify-center py-2">
+                        <img src="assets/images/ig.png" alt="Ornamen Kiri" class="h-7 w-7 rounded-full" />
+                        <p class="font-[txt] text-base">@me.yulannn</p>
+                    </div>
+                </div>
+            </a>
         </div>
     </section>
 
@@ -173,21 +181,26 @@
         <p class="relative -left-16 mt-16 text-[90px] font-semibold font-[hdr] text-[#8C1007] leading-none" data-aos="fade-right" data-aos-delay="1000">
             Panji
         </p>
-        <div class="z-10 flex flex-col items-center gap-4">
-            <div class="bg-[#8C1007]/50 backdrop-blur-sm text-sm border border-[#8C1007]/30 text-white px-6 py-4 mt-5 rounded-2xl shadow-md transition-transform hover:scale-105 font-[txt]">
-                <div class="font-[txt] text-2xl">Panji Caesar Rusmiadi</div>
-                    <div class="mt-8">
-                        <div>Putri Pertama dari <br> Bapak Suyud & Ibu Wida Ningsih</div>
-                    </div>
+        <div class="z-10 flex flex-col items-center gap-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="bg-[#8C1007]/40 w-full backdrop-blur-sm text-sm border border-[#8C1007]/30 text-white px-6 py-4 mt-5 rounded-2xl shadow-md transition-transform hover:scale-105 font-[txt]" data-aos="fade-up" data-aos-delay="600">
+                <div class="font-[txt] text-xl" data-aos="fade-up" data-aos-delay="800">
+                    Panji Caesar Rusmiadi, S.H
                 </div>
-
-                <div class="bg-[#8C1007]/40 backdrop-blur-sm text-sm border border-[#8C1007]/30 text-white px-10 mt-5 rounded-lg shadow-md transition-transform hover:scale-105 font-[txt]">
-                    <div class="flex space-x-4 items-center justify-center">
-                        <img src="assets/images/fotokeenam.JPG" alt="Ornamen Kiri" class="h-10 w-10 rounded-full mt-2" />
-                        <p>@pancaerus</p>
+                <div class="mt-4" data-aos="fade-up" data-aos-delay="800">
+                    <div class="font-[txt] text-base">
+                        Putra Keempat dari <br> Bapak Suyud <br> & <br> Ibu Wida Ningsih
                     </div>
                 </div>
             </div>
+
+            <a href="https://www.instagram.com/pancaerus/" target="_blank" rel="noopener noreferrer" class="no-underline">
+                <div class="bg-[#8C1007] backdrop-blur-sm text-sm border border-[#8C1007]/30 text-white px-10 mt-2 rounded-lg shadow-md transition-transform hover:scale-105 font-[txt]" data-aos="fade-up" data-aos-delay="800">
+                    <div class="flex space-x-4 items-center justify-center py-2">
+                        <img src="assets/images/ig.png" alt="Ornamen Kiri" class="h-7 w-7 rounded-full" />
+                        <p class="font-[txt] text-base">@pancaerus</p>
+                    </div>
+                </div>
+            </a>
         </div>
     </section>
 
@@ -195,66 +208,241 @@
         class="relative min-h-screen bg-cover bg-center flex items-center justify-center px-6 py-20"
         style="background-image: url('assets/images/fotoketujuh.JPG');"
     >
+        <!-- Overlay -->
         <div class="absolute inset-0 bg-black/60"></div>
 
-        <div class="relative z-10 max-w-4xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-8">
-            <div class="w-full md:w-1/2 flex " data-aos="fade-right" data-aos-delay="1000">
-                <img src="assets/images/fotoketujuh.JPG" alt="Pengantin" class="shadow-lg box-shadow rounded-md max-h-[420px] object-cover" />
-            </div>
+        <!-- Konten Utama -->
+        <div class="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-12 w-full">
 
-            <div class="w-full text-left " data-aos="fade-left" data-aos-delay="1000">
-                <div
-                    ref="countdownRef"
-                    class="countdown"
-                >
-                    <div class="flex justify-center space-x-10 px-5" data-aos="zoom-in">
-                        <div class="text-center ">
-                        <p class="text-5xl text-white font-bold">{{ days }}</p>
-                        <p class="text-sm mt-2 text-white/80">Hari</p>
-                        </div>
-                        <div class="text-center">
-                        <p class="text-5xl  text-white font-bold">{{ hours }}</p>
-                        <p class="text-sm mt-2 text-white/80">Jam</p>
-                        </div>
-                        <div class="text-center">
-                        <p class="text-5xl text-white font-bold">{{ minutes }}</p>
-                        <p class="text-sm mt-2 text-white/80">Menit</p>
-                        </div>
-                        <div class="text-center">
-                        <p class="text-5xl text-white font-bold">{{ seconds }}</p>
-                        <p class="text-sm mt-2 text-white/80">Detik</p>
+            <!-- Gallery (full width, no padding) -->
+            <div class="relative z-10 mt-5 w-full">
+                <div id="gallery">
+                    <div class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/images/gal-01.JPG" alt="Galeri" 
+                                    class="gallery-img cursor-pointer rounded-md" onclick="openModal(0)">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/gal-02.JPG" alt="Galeri" 
+                                    class="gallery-img cursor-pointer rounded-md" onclick="openModal(1)">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/gal-03.JPG" alt="Galeri" 
+                                    class="gallery-img cursor-pointer rounded-md" onclick="openModal(2)">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/gal-04.JPG" alt="Galeri" 
+                                    class="gallery-img cursor-pointer rounded-md" onclick="openModal(3)">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/gal-05.jpg" alt="Galeri" 
+                                    class="gallery-img cursor-pointer rounded-md" onclick="openModal(4)">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/gal-07.jpg" alt="Galeri" 
+                                    class="gallery-img cursor-pointer rounded-md" onclick="openModal(5)">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/gal-08.JPG" alt="Galeri" 
+                                    class="gallery-img cursor-pointer rounded-md" onclick="openModal(6)">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/gal-09.JPG" alt="Galeri" 
+                                    class="gallery-img cursor-pointer rounded-md" onclick="openModal(7)">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/gal-10.JPG" alt="Galeri" 
+                                    class="gallery-img cursor-pointer rounded-md" onclick="openModal(8)">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="">
-                <hr class="w-24 mx-auto my-2 border-t-2 border-white" data-aos="zoom-in" />
+            <!-- Countdown -->
+            <div class="w-full text-left" data-aos="fade-left" data-aos-delay="1000">
+                <div ref="countdownRef" class="countdown">
+                    <div class="flex justify-center space-x-7 px-5" data-aos="zoom-in">
+                        <div class="text-center">
+                            <p class="text-5xl text-white font-bold">{{ days }}</p>
+                            <p class="text-sm mt-2 text-white/80">Hari</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-5xl text-white font-bold">{{ hours }}</p>
+                            <p class="text-sm mt-2 text-white/80">Jam</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-5xl text-white font-bold">{{ minutes }}</p>
+                            <p class="text-sm mt-2 text-white/80">Menit</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-5xl text-white font-bold">{{ seconds }}</p>
+                            <p class="text-sm mt-2 text-white/80">Detik</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="px-6">
-                <p class="relative text-[60px] font-[hdr] text-white leading-none" data-aos="fade-right" data-aos-delay="1000">
+
+            <!-- Akad -->
+            <div class="w-full text-left">
+                <hr class="w-24 my-4 border-t-2 border-white" data-aos="zoom-in" />
+                <p class="text-[55px] font-[hdr] text-white leading-none mt-6" data-aos="fade-right" data-aos-delay="1000">
                     Akad Nikah
                 </p>
-                <div class="text-white mt-4 text-xl font-[txt]" data-aos="fade-left" data-aos-delay="1000">
-                    <p>
-                        Minggu, 12 Oktober 2025
-                    </p>
-                    <p>
-                        Pukul 09.00 WIB - Selesai  
-                    </p>
-                    <p class="mt-5">
-                        Di Rumah Mempelai Wanita
-                        <br>
-                        Kp. Ci Pangawaren RT 09/02, Pasir Panjang, Ciracap
-                    </p>
+                <div class="flex flex-col space-y-3 text-white mt-4 text-base font-[txt]" data-aos="fade-left" data-aos-delay="1000">
+                    <p class="text-xl mb-1">Minggu, 12 Oktober 2025</p>
+                    <p>Pukul 09.00 WIB - Selesai</p>
+                    <p>Di Rumah Mempelai Wanita <br> Kp. Bojonggenteng RT 022/011, Desa Lengkong, Kecamatan Lengkong</p>
                 </div>
-                <button id="btn-open" class="bg-[#8C1007] border border-[#8C1007] text-white px-6 py-3 mt-5 rounded-md transition-transform hover:scale-105 font-[txt]">
-                    Goole Maps
-                </button>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Kp.%20Ci%20Pangawaren%20RT%2009/02,%20Pasir%20Panjang,%20Ciracap" target="_blank" rel="noopener noreferrer">
+                    <button id="btn-open" class="bg-[#8C1007] border border-[#8C1007] text-white px-6 py-3 mt-5 rounded-md transition-transform hover:scale-105 font-[txt]">
+                        Google Maps
+                    </button>
+                </a>
             </div>
+
+            <!-- Resepsi -->
+            <div class="w-full text-left">
+                <hr class="w-24 my-4 border-t-2 border-white" data-aos="zoom-in" />
+                <p class="text-[55px] font-[hdr] text-white leading-none mt-6" data-aos="fade-right" data-aos-delay="1000">
+                    Resepsi
+                </p>
+                <div class="flex flex-col space-y-3 text-white mt-4 text-base font-[txt]" data-aos="fade-left" data-aos-delay="1000">
+                    <p class="text-xl mb-1">Minggu, 12 Oktober 2025</p>
+                    <p>Pukul 09.00 WIB - Selesai</p>
+                    <p>Di Rumah Mempelai Wanita <br> Kp. Bojonggenteng RT 022/011, Desa Lengkong, Kecamatan Lengkong</p>
+                </div>
+                
+                <a href="https://www.google.com/maps/search/?api=1&query=Kp.%20Ci%20Pangawaren%20RT%2009/02,%20Pasir%20Panjang,%20Ciracap" target="_blank" rel="noopener noreferrer">
+                    <button id="btn-open" class="bg-[#8C1007] border border-[#8C1007] text-white px-6 py-3 mt-5 rounded-md transition-transform hover:scale-105 font-[txt]">
+                        Google Maps
+                    </button>
+                </a>
+            </div>
+
+            <hr class="w-24 my-2 border-t-2 border-white" data-aos="zoom-in" />
+            <!-- Save the Date -->
+            <div class="flex flex-col items-center justify-center w-full">
+                <p class="text-center text-[55px] font-[hdr] text-white leading-none mt-6" data-aos="fade-up" data-aos-delay="1000">
+                    Save The Date
+                </p>
+            </div>
+
         </div>
     </section>
 
+    <section id="bagian-ketujuh"
+        class="relative min-h-screen bg-cover bg-center flex items-center justify-center px-6 py-10"
+        style="background-image: url('assets/images/gal-10.JPG');"
+    >
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <!-- Konten -->
+        <div class="relative z-10 w-full max-w-5xl">
+            <div class="flex justify-center items-center text-center text-white mb-6 text-base font-[txt]" data-aos="fade-left" data-aos-delay="1000">
+                <p class="text-lg italic">
+                    "A great marriage isn’t something that just happens, it’s something that must be created."
+                </p>
+            </div>
+
+            <div id="gallery">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/images/gal-01.JPG" alt="Galeri" 
+                            class="gallery-img cursor-pointer" onclick="openModal(0)">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/gal-02.JPG" alt="Galeri" 
+                            class="gallery-img cursor-pointer" onclick="openModal(1)">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/gal-03.JPG" alt="Galeri" 
+                            class="gallery-img cursor-pointer" onclick="openModal(2)">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/gal-04.JPG" alt="Galeri" 
+                            class="gallery-img cursor-pointer" onclick="openModal(3)">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/gal-05.jpg" alt="Galeri" 
+                            class="gallery-img cursor-pointer" onclick="openModal(4)">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/gal-07.jpg" alt="Galeri" 
+                            class="gallery-img cursor-pointer" onclick="openModal(5)">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/gal-08.JPG" alt="Galeri" 
+                            class="gallery-img cursor-pointer" onclick="openModal(6)">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/gal-09.JPG" alt="Galeri" 
+                            class="gallery-img cursor-pointer rounded-md" onclick="openModal(7)">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/gal-10.JPG" alt="Galeri" 
+                            class="gallery-img cursor-pointer rounded-md" onclick="openModal(8)">
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center justify-center mt-8">
+                <p class="relative text-center text-[65px] font-[hdr] text-white leading-none" data-aos="fade-right" data-aos-delay="1000" style="text-align: center !important;">
+                    Galeri Foto
+                </p>
+            </div>
+
+            <div id="galleryModal" 
+                class="fixed inset-0 bg-black/90 hidden flex items-center justify-center py-20 z-50">
+                
+                <div class="w-full max-w-5xl relative flex items-center justify-center">
+                    <!-- Tombol Close -->
+                    <button onclick="closeModal()" 
+                            class="absolute top-4 right-4 text-white text-3xl z-50">&times;</button>
+                    
+                    <!-- Swiper untuk modal -->
+                    <div class="swiper modalSwiper w-full">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide flex justify-center items-center">
+                                <img src="assets/images/gal-01.JPG" class="max-h-[80vh] object-contain">
+                            </div>
+                            <div class="swiper-slide flex justify-center items-center">
+                                <img src="assets/images/gal-02.JPG" class="max-h-[80vh] object-contain">
+                            </div>
+                            <div class="swiper-slide flex justify-center items-center">
+                                <img src="assets/images/gal-03.JPG" class="max-h-[80vh] object-contain">
+                            </div>
+                            <div class="swiper-slide flex justify-center items-center">
+                                <img src="assets/images/gal-04.JPG" class="max-h-[80vh] object-contain">
+                            </div>
+                            <div class="swiper-slide flex justify-center items-center">
+                                <img src="assets/images/gal-05.jpg" class="max-h-[80vh] object-contain">
+                            </div>
+                            <div class="swiper-slide flex justify-center items-center">
+                                <img src="assets/images/gal-07.jpg" class="max-h-[80vh] object-contain">
+                            </div>
+                            <div class="swiper-slide flex justify-center items-center">
+                                <img src="assets/images/gal-08.JPG" class="max-h-[80vh] object-contain">
+                            </div>
+                        </div>
+
+                        <!-- Navigation -->
+                        <div class="swiper-button-next text-white"></div>
+                        <div class="swiper-button-prev text-white"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Footer -->
     <div class="text-center py-4 bg-black/90">
         <h1 class="text-white text-xl font-bold tracking-widest uppercase">
         ANNSTORY <span class="text-white/50">| Part of anncode</span>
@@ -278,8 +466,30 @@
     <script>
     const { createApp, ref, onMounted } = Vue;
 
-    const audio = new Audio('./assets/music/music.mp3'); 
+    const audio = new Audio(''); 
     audio.loop = true;
+
+    let modalSwiper;
+
+    function openModal(index) {
+        document.getElementById("galleryModal").classList.remove("hidden");
+        
+        // init modal swiper jika belum
+        if (!modalSwiper) {
+        modalSwiper = new Swiper(".modalSwiper", {
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+            loop: true,
+        });
+        }
+        modalSwiper.slideToLoop(index, 0); // langsung lompat ke gambar yang diklik
+    }
+
+    function closeModal() {
+        document.getElementById("galleryModal").classList.add("hidden");
+    }
 
     document.addEventListener("visibilitychange", () => {
         if (document.visibilityState === "visible") {
@@ -288,26 +498,26 @@
             audio.pause();
         }
     });
-
+    
     document.addEventListener('DOMContentLoaded', () => {
         const images = [
-            '/assets/images/gambar-1.jpg',
-            '/assets/images/gambar-2.jpg',
-            '/assets/images/gambar-3.jpg',
-            '/assets/images/gambar-4.jpg',
-            '/assets/images/gambar-5.jpg',
-            '/assets/images/gambar-6.jpg',
-            '/assets/images/gambar-7.jpg'
+            'assets/images/gal-01.JPG',
+            'assets/images/gal-02.JPG',
+            'assets/images/gal-03.JPG',
+            'assets/images/gal-04.JPG',
+            'assets/images/gal-05.jpg',
+            'assets/images/gal-07.jpg',
+            'assets/images/gal-08.JPG'
         ];
 
         const activeImage = document.getElementById('activeImage');
 
         const swiper = new Swiper('.mySwiper', {
-            slidesPerView: 2.8,
-            spaceBetween: 10,
+            slidesPerView: 1,
+            spaceBetween: 5,
             loop: true,
             autoplay: {
-                delay: 2500,
+                delay: 1200,
                 disableOnInteraction: false,
             },
             pagination: {
@@ -316,19 +526,21 @@
             },
         });
 
-        swiper.on('slideChange', () => {
-            const realIndex = swiper.realIndex;
-            activeImage.src = images[realIndex];
+        const swiper2 = new Swiper('.mySwiper2', {
+            slidesPerView: 3,
+            spaceBetween: 5,
+            loop: true,
+            autoplay: {
+                delay: 500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
         });
 
-        document.querySelectorAll('.swiper-slide img').forEach((img, index) => {
-            img.addEventListener('click', () => {
-                activeImage.src = images[index];
-                swiper.slideToLoop(index);
-            });
-        });
     });
-
     // Firebase
     const firebaseConfig = {
         apiKey: "AIzaSyAzJKTrgJh6PZJ5Yyay7QLPDiC8YXMlirc",
