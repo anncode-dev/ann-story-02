@@ -971,8 +971,8 @@
             });
 
             // Copy rekening
-            const copied=ref(false), accountNumber='7151745192';
-            const copyAccount=()=>{ navigator.clipboard.writeText(accountNumber).then(()=>{ copied.value=true; setTimeout(()=>copied.value=false,2000); }).catch(()=>alert("Gagal menyalin nomor")); };
+            const copied=ref(false);
+            const copyAccount=(a)=>{ navigator.clipboard.writeText(a).then(()=>{ copied.value=true; setTimeout(()=>copied.value=false,2000); }).catch(()=>alert("Gagal menyalin nomor")); };
 
             const openMap=()=>{ window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Kp. Ci Pangawaren RT 09/02, Pasir Panjang, Ciracap")}`,"_blank"); };
             const addToCalendar=()=>{ window.open(`https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent('Undangan Pernikahan Siti & Angga')}&dates=20250828T090000Z/20250828T120000Z`,"_blank"); };
