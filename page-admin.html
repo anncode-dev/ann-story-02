@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yulan & Panji | anncode.dev</title>
+    <meta name="description" content="Kami mengundang Saudara/i untuk hadir dalam acara pernikahan kami.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Yulan & Panji | anncode.dev">
+    <meta property="og:description" content="Kami mengundang Saudara/i untuk hadir dalam acara pernikahan kami.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ann-story-02.vercel.app/">
+    <meta property="og:image" content="https://ann-story-02.vercel.app/assets/images/gambar-og.jpg">
+    <meta property="og:image:secure_url" content="https://ann-story-02.vercel.app/assets/images/gambar-og.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="750">
+    <meta property="og:image:height" content="600">
+
+    <!-- Twitter Card (opsional tapi disarankan) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yulan & Panji | anncode.dev">
+    <meta name="twitter:description" content="Kami mengundang Saudara/i untuk hadir dalam acara pernikahan kami.">
+    <meta name="twitter:image" content="https://ann-story-02.vercel.app/assets/images/gambar-og.jpg">
+
+    <link rel="canonical" href="https://ann-story-02.vercel.app/">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 480px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  h1 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  input, textarea {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #4f46e5;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 12px;
+    width: 100%;
+  }
+  .btn-gray { background: #4b5563; }
+  .btn-blue { background: #2563eb; }
+  .flex { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+  .flex button { flex: 1; min-width: 48%; }
+  
+  @media (max-width: 400px) {
+    .container { padding: 15px; }
+    h1 { font-size: 1.2rem; }
+    input, textarea, button { font-size: 0.95rem; padding: 8px; }
+  }
+</style>
+</head>
+<body style="font-family: Arial, sans-serif; background:#f9f9f9; margin:0; padding:0; line-height:1.5; color:#111;">
+
+<div style="max-width:480px; width:90%; margin:40px auto; padding:30px 25px; background:white; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+  <h1 style="font-size:1.6rem; margin-bottom:25px; text-align:center; color:#1f2937;">Admin - Tambah/Edit Tamu</h1>
+
+  <input id="nama_kel" placeholder="Nama Keluarga" style="display:block; width:100%; margin-top:12px; padding:12px 14px; border-radius:8px; border:1px solid #d1d5db; font-size:1rem; box-sizing:border-box;">
+  <input id="nama_pasangan" placeholder="Nama Pasangan" style="display:block; width:100%; margin-top:12px; padding:12px 14px; border-radius:8px; border:1px solid #d1d5db; font-size:1rem; box-sizing:border-box;">
+
+  <button id="generateBtn" style="padding:12px 18px; border:none; border-radius:8px; background:#4f46e5; color:white; cursor:pointer; font-size:1rem; margin-top:15px; width:100%;">Generate Link & Teks</button>
+
+  <textarea id="ucapan_text" placeholder="Teks Undangan" readonly style="display:block; width:100%; margin-top:12px; padding:12px 14px; border-radius:8px; border:1px solid #d1d5db; font-size:1rem; box-sizing:border-box; min-height:140px; resize:vertical;"></textarea>
+
+  <div id="actionButtons" style="display:none; gap:12px; flex-wrap:wrap; margin-top:15px;">
+    <button id="salinBtn" style="flex:1; min-width:48%; padding:12px 18px; border:none; border-radius:8px; background:#2563eb; color:white; cursor:pointer; font-size:1rem;">Salin Teks</button>
+    <button id="resetBtn" style="flex:1; min-width:48%; padding:12px 18px; border:none; border-radius:8px; background:#6b7280; color:white; cursor:pointer; font-size:1rem;">Tambah Nama Tamu Lain</button>
+  </div>
+</div>
+<script>
+  const namaKel = document.getElementById('nama_kel');
+  const namaPasangan = document.getElementById('nama_pasangan');
+  const ucapanText = document.getElementById('ucapan_text');
+  const generateBtn = document.getElementById('generateBtn');
+  const actionButtons = document.getElementById('actionButtons');
+  const salinBtn = document.getElementById('salinBtn');
+  const resetBtn = document.getElementById('resetBtn');
+
+  let linkTamu = '';
+
+  generateBtn.addEventListener('click', () => {
+    if (!namaKel.value || !namaPasangan.value) {
+      return alert('Nama tamu dan pasangan wajib diisi!');
+    }
+
+    const origin = window.location.origin;
+    const param = encodeURIComponent(`${namaKel.value} & ${namaPasangan.value}`);
+    linkTamu = `${origin}/?to=${param}`;
+
+    ucapanText.value = `${namaKel.value} & ${namaPasangan.value}
+
+Bismillahirrahmanirrahim
+Assalamu'alaikum Warahmatullahi Wabarakatuh
+
+Yth. Bpk/Ibu/Sdr/i ${namaKel.value.replace(/\b\w/g, c => c.toUpperCase())} & ${namaPasangan.value.replace(/\b\w/g, c => c.toUpperCase())}, 
+
+Dengan mengharap ridha dan rahmat Allah SWT, serta tanpa mengurangi rasa hormat. Perkenankan kami mengundang Bpk/Ibu/Sdr/i untuk hadir di acara pernikahan kami pada:
+
+Yulan & Panji
+Hari/Tgl : Minggu, 12 Oktober 2025
+Pukul : 08.00 s.d. Selesai
+Lokasi : Kp. Bojonggenteng RT 022/011, Desa Lengkong, Kecamatan Lengkong
+
+Merupakan suatu kehormatan bagi kami apabila Bpk/Ibu/Sdr/i dapat menghadiri/menyaksikan prosesi pernikahan kami pada tautan dibawah ini:
+
+${linkTamu}
+
+Kami juga mengharapkan ucapan, harapan, serta doa Bpk/Ibu/Sdr/i untuk kami.
+
+Atas perhatiannya kami ucapkan terimakasih.`;
+
+    actionButtons.style.display = 'flex';
+  });
+
+  salinBtn.addEventListener('click', () => {
+    if (!ucapanText.value) return alert('Teks undangan kosong!');
+    navigator.clipboard.writeText(ucapanText.value)
+      .then(() => alert('Teks undangan berhasil disalin!'))
+      .catch(() => {
+        const el = document.createElement('textarea');
+        el.value = ucapanText.value;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        alert('Teks undangan berhasil disalin (fallback)!');
+      });
+  });
+
+  resetBtn.addEventListener('click', () => {
+    namaKel.value = '';
+    namaPasangan.value = '';
+    ucapanText.value = '';
+    actionButtons.style.display = 'none';
+    linkTamu = '';
+  });
+</script>
+
+</body>
+</html>
